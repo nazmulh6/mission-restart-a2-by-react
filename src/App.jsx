@@ -17,6 +17,10 @@ const customerTicketsPromise = fetchCustomerTickets();
 function App() {
   const [progressCount, setProgressCount]=useState(0)
   const [selectedTicket, setSelectedTicket]=useState([])
+  // console.log(selectedTicket)
+  const removeTicket =(t)=>{
+    console.log(t)
+  }
 
   return (
     <>
@@ -38,7 +42,10 @@ function App() {
         <div className='border border-gray-200 p-4 rounded-xl'>
         <Suspense>
           
-          <TaskStatus ></TaskStatus>
+          <TaskStatus 
+          selectedTicket={selectedTicket} 
+          removeTicket={removeTicket}
+          ></TaskStatus>
         </Suspense>
         <Suspense>
           <ResolveSection></ResolveSection>

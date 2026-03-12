@@ -3,13 +3,14 @@ import dateImg from '../../assets/Vector-date-box.jpg'
 import { toast } from 'react-toastify';
 
 const Ticket = ({ ticket, setProgressCount ,selectedTicket, setSelectedTicket}) => {
-    console.log(ticket)
+    // console.log(ticket)
     const { title, status, description, id, priority, customer, created_date } = ticket;
     const [isSelected, setIsSelected] = useState(false)
 
-    const handleSelected = () => {
+    const handleSelected = (TicketsData) => {
         setIsSelected(true)
         setProgressCount(toast('Ticket added successfully'))
+setSelectedTicket([...selectedTicket, TicketsData])
     }
     return (
         <div onClick={() => {handleSelected(ticket)}} className='max-w-[1200px] mx-auto border-2 mb-3 border-gray-200 rounded-xl p-4'>
