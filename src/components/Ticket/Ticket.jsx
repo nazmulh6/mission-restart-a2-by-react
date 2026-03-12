@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import dateImg from '../../assets/Vector-date-box.jpg'
 import { toast } from 'react-toastify';
 
-const Ticket = ({ ticket, setProgressCount ,selectedTicket, setSelectedTicket}) => {
+const Ticket = ({ ticket ,selectedTicket, setSelectedTicket,removeTicket}) => {
     // console.log(ticket)
     const { title, status, description, id, priority, customer, created_date } = ticket;
     const [isSelected, setIsSelected] = useState(false)
 
+//    removeTicket(ticket)
+
     const handleSelected = (TicketsData) => {
         setIsSelected(true)
-        setProgressCount(toast('Ticket added successfully'))
+        toast('Ticket added successfully')
 setSelectedTicket([...selectedTicket, TicketsData])
     }
     return (

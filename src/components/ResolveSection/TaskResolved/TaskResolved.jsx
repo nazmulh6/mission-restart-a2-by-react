@@ -1,9 +1,13 @@
 import React from 'react';
 
-const TaskResolved = () => {
+const TaskResolved = ({ticket}) => {
     return (
         <div>
-            <h1 className='font-bold text-2xl mb-2'>Resolved Task</h1>
+            
+            <div className='border border-gray-100 p-2 rounded-xl'>
+                <h2 className='font-semibold'>{ticket.title}</h2>
+                
+            </div>
         </div>
     );
 };
