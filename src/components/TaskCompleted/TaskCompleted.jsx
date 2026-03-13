@@ -18,11 +18,11 @@ setCompletedTicket([...completedTicket, TicketsData])
     return (
         <div>
 
-            <div className='border border-gray-100 p-2 rounded-xl'>
+            <div className='border border-gray-100 p-0 md:p-2 rounded-xl'>
                 <h2 className='font-semibold'>{ticket.title}</h2>
                 <button onClick={()=>{
                     handleRemove(); handleClickedCompleted(ticket);
-                }} className='btn btn-accent mt-2 px-20'>Completed</button>
+                }} className='btn btn-accent mt-2  px-2 md:px-20'>Completed</button>
             </div>
 
         </div>

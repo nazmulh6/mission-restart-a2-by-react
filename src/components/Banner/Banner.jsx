@@ -10,7 +10,7 @@ const Banner = ({selectedTicket, completedTicket}) => {
                 <h1 className='text-xl'>In-Progress</h1>
                 <h2 className='text-3xl'>{selectedTicket.length}</h2>
             </div>
-            <div className=' flex-1 border  border-gray-200 rounded-xl px-14 py-8  text-center text-white font-semibold  bg-left bg-no-repeat'style={{ backgroundImage: `url(${bannerImg}),linear-gradient(to right, #54CF68, #00827A)` }}>
+            <div className='flex-1  border  border-gray-200 rounded-xl px-14 py-8  text-center text-white font-semibold  bg-left bg-no-repeat'style={{ backgroundImage: `url(${bannerImg}),linear-gradient(to right, #54CF68, #00827A)` }}>
                 <h1 className='text-xl'>Resolved</h1>
                 <h2 className='text-3xl'>{completedTicket.length}</h2>
                 
