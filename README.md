@@ -1,16 +1,33 @@
-# React + Vite
+# Question & Answer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+What is JSX, and why is it used?
+JSX means "JavaScript XML" is a syntax extension for JavaScript that allows developers to write HTML-code directly within their JavaScript code.
+Uses:
+for safety, readability, maintainability and clean code.
 
-Currently, two official plugins are available:
+What is the difference between State and Props?
+State:
+1. Data is managed within the component itself.
+2. State is mutable and can be changed within the component using an updater function (e.g., setState or useState).
+Props:
+1. Data is passed from a parent component to a child component.
+2. Props are immutable and read-only; they cannot be modified by the receiving component.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+What is the useState hook, and how does it work?
+useState hook: 
+The useState hook is a built-in React function that allows functional components to manage and track state.
+how it works:
+If we call useState at the top level of your function component, passing the initialState as an argument.
+It returns an array with two elements: the current state value and a function (often named with the set prefix, e.g., setCount) that lets we update that state.
+When the state updater function is called with a new value, React re-renders the component with the new state, preserving the state value across renders.
 
-## React Compiler
+How can you share state between components in React?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+We can share state between components by passing as props in the component tag name then destructuring from the component function.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+How is event handling done in React?
+Event handling in React is similar to HTML but with some key differences. 
+CamelCase Naming: Event names are written in camelCase (e.g., onClick instead of onclick).
+Function as Handler: We pass a JavaScript function as the event handler, rather than a string.
+
