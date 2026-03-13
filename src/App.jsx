@@ -33,7 +33,7 @@ function App() {
       completedTicket={completedTicket}
       ></Banner>
       <section className='flex max-w-[1200px] mx-auto my-10  gap-2 justify-between'>
-        <Suspense fallback={<span className="loading loading-spinner text-error"></span>}>
+        <Suspense  fallback={<span className="loading loading-spinner text-error"></span>}>
           <CustomerTickets
             customerTicketsPromise={customerTicketsPromise}
             selectedTicket={selectedTicket}

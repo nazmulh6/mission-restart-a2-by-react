@@ -20,7 +20,7 @@ setSelectedTicket([...selectedTicket, TicketsData])
         <div onClick={() => {handleSelected(ticket)}} className='max-w-[1200px] mx-auto border-2 mb-1 border-gray-200 rounded-xl p-4'>
             <div className='flex justify-between'>
                 <h2 className='font-bold'>{title}</h2>
-                <button className='btn btn-success rounded-2xl'>{status}</button>
+                <button className='btn btn-soft btn-accent rounded-2xl'>{status}</button>
             </div>
             <p className='text-gray-400'>{description}</p>
             <div className="last-line flex justify-between">
