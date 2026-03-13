@@ -7,6 +7,7 @@ import CustomerTickets from './components/CustomerTickets/CustomerTickets'
 import TaskStatus from './components/TaskStatus/TaskStatus'
 import ResolveSection from './components/ResolveSection/ResolveSection'
 import { ToastContainer } from 'react-toastify';
+import Footer from './components/Footer/Footer'
 
 
 const fetchCustomerTickets = async () => {
@@ -37,7 +38,7 @@ function App() {
             customerTicketsPromise={customerTicketsPromise}
             selectedTicket={selectedTicket}
             setSelectedTicket={setSelectedTicket}
-            removeTicket={removeTicket}
+            
           ></CustomerTickets>
         </Suspense>
         <div className='my-10'>
@@ -60,7 +61,9 @@ function App() {
           </div>
         </div>
       </section>
-
+<Suspense>
+  <Footer></Footer>
+</Suspense>
       <ToastContainer />
     </>
   )

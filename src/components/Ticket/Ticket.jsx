@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import dateImg from '../../assets/Vector-date-box.jpg'
 import { toast } from 'react-toastify';
 
-const Ticket = ({ ticket ,selectedTicket, setSelectedTicket,removeTicket}) => {
+
+const Ticket = ({ ticket ,selectedTicket, setSelectedTicket}) => {
     // console.log(ticket)
     const { title, status, description, id, priority, customer, created_date } = ticket;
     const [isSelected, setIsSelected] = useState(false)
 
-//    removeTicket(ticket)
+   
 
     const handleSelected = (TicketsData) => {
         setIsSelected(true)
@@ -15,7 +16,8 @@ const Ticket = ({ ticket ,selectedTicket, setSelectedTicket,removeTicket}) => {
 setSelectedTicket([...selectedTicket, TicketsData])
     }
     return (
-        <div onClick={() => {handleSelected(ticket)}} className='max-w-[1200px] mx-auto border-2 mb-3 border-gray-200 rounded-xl p-4'>
+        <>
+        <div onClick={() => {handleSelected(ticket)}} className='max-w-[1200px] mx-auto border-2 mb-1 border-gray-200 rounded-xl p-4'>
             <div className='flex justify-between'>
                 <h2 className='font-bold'>{title}</h2>
                 <button className='btn btn-success rounded-2xl'>{status}</button>
@@ -34,6 +36,10 @@ setSelectedTicket([...selectedTicket, TicketsData])
                 </div>
             </div>
         </div>
+        {/* <TaskCompleted handleDelete={handleDelete}></TaskCompleted> */}
+       
+        </>
+        
     );
 };
 
